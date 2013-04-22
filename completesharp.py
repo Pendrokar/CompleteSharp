@@ -113,7 +113,7 @@ class CompleteSharpCompletion(completioncommon.CompletionCommon):
         if view.is_scratch():
             return False
         language = self.get_language(view)
-        return language == "cs"
+        return language == "cs" or language == "csx"
 
 comp = CompleteSharpCompletion()
 
