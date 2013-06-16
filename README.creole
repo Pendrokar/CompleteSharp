@@ -1,4 +1,16 @@
-=== Installation ===
+== Changes ==
+Changes from the original completesharp project
+ * Recognises csx files
+ * Settings (completesharp_assemblies) configured to search your packages directory. ***Note*** This only works if you open a folder or use a sublime project. Packages folder assumed to be in the same directory as your scripts. i.e.
+
+     \folder    (to open in submlime)
+         myscript.csx
+         \packages
+           Microsoft.AspNet.WebApi.Core.4.0.XXX
+           Microsoft.AspNet......
+
+
+== Installation ==
     * If you want to manually install it using git instead:
     ** Go to your packages directory and type:
     ***        git clone --recursive https://github.com/ewilde/CompleteSharp
