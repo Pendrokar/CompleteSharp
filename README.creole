@@ -1,4 +1,13 @@
-= Plugin discontinued =
+=== Installation ===
+    * If you want to manually install it using git instead:
+    ** Go to your packages directory and type:
+    ***        git clone --recursive https://github.com/ewilde/CompleteSharp
+    ** To update to the latest commit, use this command in the CompleteSharp directory:
+    ***        git pull && git submodule foreach --recursive git pull origin master
+    * Once installed, you probably want to tweak the "completesharp_assemblies" setting, specifying the full path to extra assemblies to load
+
+
+== Plugin is being rewritten ==
 ** I don't intend to continue development of this plugin, so I've disabled the issues page. If something is broken, submit a pull request and I'll consider merging it.
 
 ** Eventually it will be replaced by https://github.com/quarnster/completion. If you'd like to see that move along quicker, submit a pull request and/or participate in its discussions.
@@ -13,18 +22,6 @@ Please go [[https://github.com/quarnster/CompleteSharp/issues?sort=created&direc
   # On Windows you need to have the .NET framework installed
   # On OS X/Linux you need to have mono installed and the mono binary in your path
 
-=== Installation ===
-    * The easiest way to install CompleteSharp is via the excellent Package Control Plugin
-    ** See http://wbond.net/sublime_packages/package_control#Installation
-    *** Once package control has been installed, bring up the command palette (cmd+shift+P or ctrl+shift+P)
-    *** Type Install and select "Package Control: Install Package"
-    *** Select CompleteSharp from the list. Package Control will keep it automatically updated for you
-    * If you want to manually install it using git instead:
-    ** Go to your packages directory and type:
-    ***        git clone --recursive https://github.com/quarnster/CompleteSharp
-    ** To update to the latest commit, use this command in the CompleteSharp directory:
-    ***        git pull && git submodule foreach --recursive git pull origin master
-    * Once installed, you probably want to tweak the "completesharp_assemblies" setting, specifying the full path to extra assemblies to load
 
 === Usage ===
 Once installed it'll try to provide reasonable completion suggestions when you trigger autocompletion.
