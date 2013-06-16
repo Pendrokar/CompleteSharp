@@ -3,11 +3,12 @@ Changes from the original completesharp project
  * Recognises csx files
  * Settings (completesharp_assemblies) configured to search your packages directory. ***Note*** This only works if you open a folder or use a sublime project. Packages folder assumed to be in the same directory as your scripts. i.e.
 
-     \folder    (to open in submlime)
-         myscript.csx
-         \packages
-           Microsoft.AspNet.WebApi.Core.4.0.XXX
-           Microsoft.AspNet......
+    \folder    (to open in submlime)
+        myscript.csx
+            \packages
+                Microsoft.AspNet.WebApi.Core.4.0.XXX
+                Microsoft.AspNet......
+    
 
 
 == Installation ==
