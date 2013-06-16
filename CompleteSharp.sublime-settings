@@ -16,7 +16,7 @@
     //
     // Replacement is done sequentially, first all ${project_path:} are resolved, then ${home} and
     // ${env:<variable>} tokens,  and then the ${folder:} are replaced,
-    "completesharp_assemblies": [],
+    "completesharp_assemblies": ["${project_path:${folder:packages/**/lib/net40/**dll}/*}"],
 
     // Regular expression filter used to filter the completion
     // suggestions
