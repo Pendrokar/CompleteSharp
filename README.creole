@@ -8,7 +8,7 @@ Changes from the original completesharp project
             \packages
                 Microsoft.AspNet.WebApi.Core.4.0.XXX
                 Microsoft.AspNet......
-}}}    
+}}}
 
 
 == Installation ==
@@ -21,7 +21,7 @@ Changes from the original completesharp project
 
 
 == Plugin is being rewritten ==
-** I don't intend to continue development of this plugin, so I've disabled the issues page. If something is broken, submit a pull request and I'll consider merging it.
+** I(quarnster) don't intend to continue development of this plugin, so I've disabled the issues page. If something is broken, submit a pull request and I'll consider merging it.
 
 ** Eventually it will be replaced by https://github.com/quarnster/completion. If you'd like to see that move along quicker, submit a pull request and/or participate in its discussions.
 

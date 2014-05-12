@@ -39,7 +39,23 @@ class CompleteSharpDotComplete(completioncommon.CompletionCommonDotComplete):
 class CompleteSharpCompletion(completioncommon.CompletionCommon):
     def __init__(self):
         super(CompleteSharpCompletion, self).__init__("CompleteSharp.sublime-settings", os.path.dirname(os.path.abspath(__file__)))
-        self.replacements = {"int": "System.Int32", "string": "System.String", "char": "System.Char", "void": "System.Void", "long": "System.Int64", "short": "System.Int16"}
+        self.replacements = {
+            "bool": "System.Boolean",
+            "byte": "System.Byte",
+            "char": "System.Char",
+            "decimal": "System.Decimal",
+            "double": "System.Double",
+            "float": "System.Single",
+            "int": "System.Int32",
+            "long": "System.Int64",
+            "sbyte": "System.SByte",
+            "short": "System.Int16",
+            "uint": "System.UInt32",
+            "ulong": "System.UInt64",
+            "ushort": "System.UInt16",
+            "string": "System.String",
+            "void": "System.Void"
+        }
 
     def find_absolute_of_type(self, data, full_data, type, template_args=[]):
         idx1 = type.find("+")
@@ -106,7 +122,10 @@ class CompleteSharpCompletion(completioncommon.CompletionCommon):
         if sublime.platform() != "windows":
             cmd = self.get_setting("completesharp_mono_path", "mono") + " "
             q = "\'"
-        cmd = "%sCompleteSharp.exe %s%s%s" % (cmd, q, ";;--;;".join(extra), q)
+        cmd = cmd + "CompleteSharp.exe"
+        if len(extra) != 0:
+            cmd += " %s%s%s" % (q, ";;--;;".join(extra), q)
+        print("CompleteSharp: $ " + cmd)
         return cmd
 
     def is_supported_language(self, view):
